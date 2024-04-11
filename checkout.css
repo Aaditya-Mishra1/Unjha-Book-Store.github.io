@@ -106,3 +106,29 @@ button[type="button"]:hover {
     background-color: #27ae60; /* Change the hover background color */
 }
 
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .customer-details,
+    .order-details {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .customer-details {
+        padding-right: 0;
+    }
+
+    .order-details {
+        padding-left: 0;
+    }
+
+    .book-info img {
+        width: 80px;
+        margin-right: 10px;
+    }
+}
