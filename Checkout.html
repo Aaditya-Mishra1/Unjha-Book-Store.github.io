@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkout.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <div class="container">
+        <!-- Left side: Customer details form -->
+        <div class="customer-details">
+            <h2>Customer Details</h2>
+            <form id="customerForm" action="process_order.php" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="pincode">Pincode:</label>
+                <input type="text" id="pincode" name="pincode" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+
+                <label for="mobile">Mobile Number:</label>
+                <input type="text" id="mobile" name="mobile" required>
+
+                <!-- Move the submit button to the right side -->
+                <!-- <button type="submit">Submit</button> -->
+            </form>
+        </div>
+
+        <!-- Add a break between the left and right sections -->
+        <div class="break"></div>
+
+        <!-- Right side: Order details and payment options -->
+        <div class="order-details">
+            <h2>Order Details</h2>
+            <div class="book-info">
+                <img src="image/book-image.jpg" alt="Book Image">
+                <div class="details">
+                    <p>Book Title</p>
+                    <p>$19.99</p>
+                    <!-- Add payment options here -->
+                    <label for="payment">Payment Method:</label>
+                    <select id="payment" name="payment">
+                        <option value="credit">Credit Card</option>
+                        <option value="debit">Debit Card</option>
+                        <option value="paypal">PayPal</option>
+                    </select>
+                    <!-- Move the payment button here -->
+                    <button type="submit">Make Payment</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

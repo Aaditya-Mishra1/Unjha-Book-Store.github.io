@@ -7,6 +7,12 @@
     <title>Shopping Cart</title>
     <link rel="manifest" href="favicon_io/site.webmanifest">
     <link rel="icon" href="image/favicon.ico" type="imaga/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
     <h2>Add to Cart Section</h2>
@@ -22,7 +28,14 @@
             <div class="content">
                 <h3>featured books</h3>
                 <div class="price">$15.99 <span>$20.99</span></div>
-                <a href="./cart.html" class="btn">Buy</a>
+                <a href="Checkout.html" class="btn">Buy</a>
+                <!-- Example for one product, repeat the structure for each product -->
+                <form id="product1Form" action="./checkout.html" method="GET">
+                    <input type="hidden" name="productName" value="Featured Book">
+                    <!-- Other input fields for customer details -->
+                    
+                </form>
+
             </div>
         </div>
 

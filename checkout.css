@@ -1,0 +1,88 @@
+/* Styling for the body */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Styling for the container */
+.container {
+    max-width: 800px; /* Adjust as needed */
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex; /* Display children elements side by side */
+}
+
+/* Styling for the left side: Customer details */
+.customer-details {
+    flex: 1; /* Take up remaining space */
+    padding-right: 20px; /* Add space between left and right sides */
+}
+
+.customer-details h2 {
+    text-align: center;
+    color: #333;
+}
+
+.customer-details form {
+    display: flex;
+    flex-direction: column;
+}
+
+.customer-details label {
+    margin-top: 10px;
+    font-weight: bold;
+    color: #333;
+}
+
+.customer-details input {
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Styling for the right side: Order details and payment options */
+.order-details {
+    flex: 1; /* Take up remaining space */
+    padding-left: 20px; /* Add space between left and right sides */
+}
+
+.order-details h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* Styling for the book info section */
+.book-info {
+    display: flex;
+    align-items: center;
+}
+
+.book-info img {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-right: 20px;
+}
+
+.book-info .details p {
+    margin-bottom: 10px;
+}
+
+.book-info .details select {
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Add style for the break */
+.break {
+    flex-basis: 20px; /* Adjust the space between left and right sections */
+}

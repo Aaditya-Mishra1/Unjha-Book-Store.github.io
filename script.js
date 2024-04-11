@@ -233,3 +233,20 @@ function displayCart() {
 
 // Call displayCart() when the cart page is loaded
 document.addEventListener('DOMContentLoaded', displayCart);
+
+// JavaScript to handle form submission
+document.addEventListener('DOMContentLoaded', function() {
+  var productForms = document.querySelectorAll('form');
+  productForms.forEach(function(form) {
+      form.addEventListener('submit', function(event) {
+          event.preventDefault(); // Prevent default form submission
+
+          // Collect form data
+          var formData = new FormData(form);
+          var queryString = new URLSearchParams(formData).toString();
+
+          // Redirect to checkout page with query string
+          window.location.href = './checkout.html?' + queryString;
+      });
+  });
+});
