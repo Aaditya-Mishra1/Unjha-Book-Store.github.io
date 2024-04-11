@@ -11,27 +11,31 @@
         <!-- Left side: Customer details form -->
         <div class="customer-details">
             <h2>Customer Details</h2>
-            <form id="customerForm" action="process_order.php" method="post">
+            <form id="customerForm" action="https://formspree.io/f/meqyprog" method="POST">
                 <label for="name">Name:</label>
                 <input type="text" id="name" name="name" required>
-
+        
                 <label for="address">Address:</label>
                 <input type="text" id="address" name="address" required>
-
+        
                 <label for="pincode">Pincode:</label>
                 <input type="text" id="pincode" name="pincode" required>
-
+        
                 <label for="city">City:</label>
                 <input type="text" id="city" name="city" required>
-
+        
                 <label for="state">State:</label>
                 <input type="text" id="state" name="state" required>
-
+        
                 <label for="mobile">Mobile Number:</label>
                 <input type="text" id="mobile" name="mobile" required>
-
-                <!-- Move the submit button to the right side -->
-                <!-- <button type="submit">Submit</button> -->
+        
+                <!-- Hidden input field to store payment method -->
+                <input type="hidden" id="paymentMethod" name="paymentMethod">
+        
+                <!-- Add any additional fields as needed -->
+        
+                
             </form>
         </div>
 
@@ -42,22 +46,49 @@
         <div class="order-details">
             <h2>Order Details</h2>
             <div class="book-info">
-                <img src="image/book-image.jpg" alt="Book Image">
+                <!-- Use the retrieved image URL here -->
+                <img src="https://raw.githubusercontent.com/KordePriyanka/Books4MU-Book-Store-Website-/main/image/book-1.png" alt="Book Image">
                 <div class="details">
                     <p>Book Title</p>
-                    <p>$19.99</p>
-                    <!-- Add payment options here -->
-                    <label for="payment">Payment Method:</label>
-                    <select id="payment" name="payment">
-                        <option value="credit">Credit Card</option>
-                        <option value="debit">Debit Card</option>
-                        <option value="paypal">PayPal</option>
-                    </select>
-                    <!-- Move the payment button here -->
-                    <button type="submit">Make Payment</button>
+                    <p>₹1574.25</p>
                 </div>
             </div>
+            <!-- Payment options and button -->
+            <div class="payment-options">
+                <h3>Payment Options</h3>
+                <!-- Add your payment options here -->
+                <!-- <input type="radio" id="upi" name="paymentMethod" value="upi">
+                <label for="upi">UPI</label><br> -->
+                <input type="radio" id="cashOnDelivery" name="paymentMethod" value="cashOnDelivery">
+                <label for="cashOnDelivery">Cash on Delivery</label><br>
+            </div>
+            <!-- UPI form box -->
+            <div id="upiForm" class="hidden">
+                <!-- Add UPI form fields here -->
+            </div>
+            <button type="button" onclick="completeOrder()">Make Payment</button>
         </div>
     </div>
+
+    <script>
+        function completeOrder() {
+    // Get the selected payment method
+    var paymentMethod = document.querySelector('input[name="paymentMethod"]:checked');
+
+    // Set the value of the hidden input field
+    document.getElementById("paymentMethod").value = paymentMethod ? paymentMethod.value : '';
+
+    // Submit the form
+    document.getElementById("customerForm").submit();
+
+    // Show order confirmation message
+    alert("Your order is on the way!");
+
+    // Clear form fields
+    document.getElementById("customerForm").reset();
+}
+
+    </script>
+    
 </body>
 </html>
